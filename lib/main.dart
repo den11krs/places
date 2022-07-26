@@ -4,6 +4,10 @@ void main() {
   runApp(const App());
 }
 
+class AppStrings {
+  static const appTitle = 'Places';
+}
+
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
@@ -11,7 +15,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Places',
+      title: AppStrings.appTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
