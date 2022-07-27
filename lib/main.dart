@@ -11,7 +11,6 @@ class AppStrings {
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,12 +34,6 @@ class MyFirstWidget extends StatelessWidget {
       ),
     );
   }
-
-  // Тема 3 Домашнее задание 4 Задание 5:
-  // The following method won't work because 'context' is undefined.
-  // Type whatsTheContextType() {
-  //   return context.runtimeType;
-  // }
 }
 
 class MyFirstStatefulWidget extends StatefulWidget {
@@ -63,11 +56,5 @@ class _MyFirstStatefulWidgetState extends State<MyFirstStatefulWidget> {
         child: Text('Hello'),
       ),
     );
-  }
-
-  // Тема 3 Домашнее задание 4 Задание 6:
-  // This method works fine because 'context' is a property of State class from which _MyFirstStatefulWidgetState extends.
-  Type whatsTheContextType() {
-    return context.runtimeType;
   }
 }
