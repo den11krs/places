@@ -19,28 +19,11 @@ class _SightListScreenState extends State<SightListScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
-            SizedBox(
-              width: 200.0,
-              height: 100,
-              child: Card(child: Text('SizedBox Widget')),
-            ),
             Text(
               'Text Widget',
               style: TextStyle(
                 fontSize: 40,
                 color: Colors.green,
-              ),
-            ),
-            SizedBox(
-              width: 200.0,
-              height: 100,
-              child: Card(child: Text('SizedBox Widget')),
-            ),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
               ),
             ),
           ],
