@@ -5,8 +5,15 @@ void main() {
   runApp(const App());
 }
 
-class AppStrings {
+abstract class AppStrings {
   static const appTitle = 'Places';
+}
+
+abstract class AppColors {
+  static const appMainColor = 0xFF252849;
+  static const appSecondaryColor = 0xFF3B3E5B;
+  static const appGreenColor = 0xFF4CAF50;
+  static const appYellowColor = 0xFFFCDD3D;
 }
 
 class App extends StatelessWidget {
@@ -16,9 +23,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: AppStrings.appTitle,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(fontFamily: 'Roboto'),
       home: const SightListScreen(),
     );
   }
