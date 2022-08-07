@@ -5,11 +5,12 @@ void main() {
   runApp(const App());
 }
 
-abstract class AppStrings {
-  static const appTitle = 'Places';
+class AppStrings {
+  static const String appTitle = 'Places';
+  static const String appBarText = 'Список интересных мест';
 }
 
-abstract class AppColors {
+class AppColors {
   static const appMainColor = 0xFF252849;
   static const appSecondaryColor = 0xFF3B3E5B;
   static const appGreenColor = 0xFF4CAF50;
