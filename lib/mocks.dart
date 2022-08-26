@@ -7,7 +7,7 @@ final List<Sight> mocks = [
     -4.117791526511193,
     'https://upload.wikimedia.org/wikipedia/commons/c/c9/Acueducto_Romano_%28Segovia%2C_España%29.jpg',
     'El acueducto de Segovia es un acueducto romano que llevaba aguas a la ciudad española de Segovia hasta 1973. Su construcción data de principios del siglo ii d. C., a finales del reinado del emperador Trajano o principios del de Adriano. La parte más visible, y por lo tanto famosa, es la arquería que cruza la plaza del Azoguejo, en la ciudad.',
-    'Roman aqueduct & grand landmark monument',
+    'Landmark',
   ),
   Sight(
     'Alhambra',
@@ -23,6 +23,6 @@ final List<Sight> mocks = [
     -0.3504675224226168,
     'https://upload.wikimedia.org/wikipedia/commons/e/ef/La_Ciudad_de_las_Artes_y_las_Ciencias_de_Valencia.jpg',
     'State-of-the-art science complex set within a landscaped park with a huge aquarium & IMAX screen.',
-    'un complejo arquitectónico, cultural y de entretenimiento',
+    'Сomplejo arquitectónico, cultural y de entretenimiento',
   ),
 ];
