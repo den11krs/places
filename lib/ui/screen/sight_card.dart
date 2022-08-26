@@ -131,50 +131,47 @@ class SightCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      // color: Colors.yellowAccent,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Stack(
-                            children: [
-                              const Positioned.fill(
-                                child: ColoredBox(
-                                  color: Color(AppColors.appGreenColor),
-                                ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Stack(
+                          children: [
+                            const Positioned.fill(
+                              child: ColoredBox(
+                                color: Color(AppColors.appGreenColor),
                               ),
-                              TextButton(
-                                onPressed: () {},
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
-                                    Icon(
-                                      Icons.route,
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Icon(
+                                    Icons.route,
+                                    color: Colors.white,
+                                    size: 24,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'ПОСТРОИТЬ МАРШРУТ',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 14,
+                                      //In Figma 'Line height' = 18px.
+                                      // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
+                                      height: 1.28,
                                       color: Colors.white,
-                                      size: 24,
                                     ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'ПОСТРОИТЬ МАРШРУТ',
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 14,
-                                        //In Figma 'Line height' = 18px.
-                                        // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
-                                        height: 1.28,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -192,7 +189,6 @@ class SightCard extends StatelessWidget {
                         children: [
                           Flexible(
                             child: TextButton(
-                              //style: TextButton.styleFrom(),
                               onPressed: () {},
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -264,7 +260,7 @@ class SightCard extends StatelessWidget {
           ),
 
           // Next I have a rounded 'back' iconButton with some SafeArea.
-          // It's aligned to topLeft iuseing Align widget. Just in case.
+          // It's aligned to topLeft useing Align widget. Just in case.
           SafeArea(
             child: Align(
               alignment: Alignment.topLeft,
