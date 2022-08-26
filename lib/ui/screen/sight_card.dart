@@ -63,7 +63,7 @@ class SightCard extends StatelessWidget {
                               width: double.infinity,
                               child: Row(
                                 children: [
-                                  SizedBox(
+                                  Flexible(
                                     child: Text(
                                       sight.type,
                                       textAlign: TextAlign.left,
@@ -85,7 +85,7 @@ class SightCard extends StatelessWidget {
                                     width: 16,
                                   ),
                                   // TODO: Change this hardcoded line to the real data, when you know where to get it.
-                                  const SizedBox(
+                                  const Flexible(
                                     child: Text(
                                       'Closed until 9:00 AM',
                                       textAlign: TextAlign.left,

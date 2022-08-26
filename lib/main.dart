@@ -29,7 +29,7 @@ class App extends StatelessWidget {
       title: AppStrings.appTitle,
       theme: ThemeData(fontFamily: 'Roboto'),
       home: SightCard(
-        sight: mocks[0],
+        sight: mocks[5],
       ),
     );
   }
