@@ -134,7 +134,6 @@ class SightCard extends StatelessWidget {
                     Container(
                       // color: Colors.yellowAccent,
                       child: Padding(
-                        // TODO: is this padding correct?
                         padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12),
@@ -188,14 +187,10 @@ class SightCard extends StatelessWidget {
                       height: 0,
                     ),
                     Padding(
-                      //TODO: is this padding correct?
-                      padding: const EdgeInsets.fromLTRB(0, 8, 16, 8),
+                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                       child: Row(
-                        //mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Flexible(
-                            flex: 2,
-                            fit: FlexFit.tight,
                             child: TextButton(
                               //style: TextButton.styleFrom(),
                               onPressed: () {},
@@ -228,8 +223,6 @@ class SightCard extends StatelessWidget {
                             ),
                           ),
                           Flexible(
-                            flex: 2,
-                            fit: FlexFit.tight,
                             child: TextButton(
                               onPressed: () {},
                               child: Row(
