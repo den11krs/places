@@ -42,7 +42,7 @@ final List<Sight> mocks = [
     'Tourist attraction',
   ),
   Sight(
-    'Dean Village',
+    'Dean Village Dean Village Dean Village Dean Village Dean Village Dean Village Dean Village Dean Village Dean Village Dean Village',
     55.9523381383206,
     -3.218433886612059,
     'https://upload.wikimedia.org/wikipedia/commons/a/a4/Dean_Village%2C_Edinburgh_%2837952869852%29.jpg',
