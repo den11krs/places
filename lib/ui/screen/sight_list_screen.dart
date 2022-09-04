@@ -20,7 +20,8 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        toolbarHeight: 112,
+        //toolbarHeight: 112,
+        toolbarHeight: 128,
         elevation: 0,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,6 +44,10 @@ class _SightListScreenState extends State<SightListScreen> {
                 color: Color(AppColors.appSecondaryColor),
               ),
             ),
+            SizedBox(
+              width: double.infinity,
+              height: 16,
+            ),
           ],
         ),
       ),
@@ -51,7 +56,7 @@ class _SightListScreenState extends State<SightListScreen> {
           children: [
             for (var i = 0; i < mocks.length; i++) ...[
               Padding(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                 child: Stack(
                   children: [
                     SightCard(sight: mocks[i]),
