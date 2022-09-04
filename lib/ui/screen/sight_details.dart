@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:places/domain/sight.dart';
-import 'package:places/main.dart';
+import 'package:places/res/app_assets.dart';
+import 'package:places/res/app_colors.dart';
+// import 'package:places/res/app_strings.dart';
 
 class SightDetails extends StatelessWidget {
   final Sight sight;
@@ -189,7 +192,7 @@ class SightDetails extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    'res/icon_go.svg',
+                                    AppAssets.appGoIcon,
                                     color: Colors.white,
                                     semanticsLabel: 'Go',
                                   ),
@@ -235,7 +238,7 @@ class SightDetails extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    'res/icon_calendar.svg',
+                                    AppAssets.appCalendarIcon,
                                     color: const Color(
                                       AppColors.appSecondary2Color,
                                     ).withOpacity(0.56),
@@ -266,7 +269,7 @@ class SightDetails extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    'res/icon_heart.svg',
+                                    AppAssets.appHeartIcon,
                                     color: const Color(
                                       AppColors.appSecondaryColor,
                                     ),

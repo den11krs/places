@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:places/main.dart';
+
 import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/res/app_assets.dart';
+import 'package:places/res/app_colors.dart';
+import 'package:places/res/app_strings.dart';
 
 class SightListScreen extends StatefulWidget {
   const SightListScreen({Key? key}) : super(key: key);
@@ -60,7 +63,7 @@ class _SightListScreenState extends State<SightListScreen> {
                           horizontal: 16,
                         ),
                         child: SvgPicture.asset(
-                          'res/icon_heart.svg',
+                          AppAssets.appHeartIcon,
                           color: Colors.white,
                           height: 24,
                           width: 24,
