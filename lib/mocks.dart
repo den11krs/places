@@ -2,7 +2,7 @@ import 'package:places/domain/sight.dart';
 
 final List<Sight> mocks = [
   Sight(
-    'Acueducto de Segovia',
+    'Acueducto de Segovia Acueducto de Segovia Acueducto de Segovia',
     40.94800736932299,
     -4.117791526511193,
     'https://upload.wikimedia.org/wikipedia/commons/c/c9/Acueducto_Romano_%28Segovia%2C_España%29.jpg',
@@ -18,7 +18,7 @@ final List<Sight> mocks = [
     'Medieval complex housing palaces, carved Moorish throne room & cloistered courtyards with fountains',
   ),
   Sight(
-    'La Ciudad de las Artes y las Ciencias',
+    'La Ciudad de las Artes y las Ciencias La Ciudad de las Artes y las Ciencias',
     39.45493273656893,
     -0.3504675224226168,
     'https://upload.wikimedia.org/wikipedia/commons/e/ef/La_Ciudad_de_las_Artes_y_las_Ciencias_de_Valencia.jpg',
@@ -26,7 +26,7 @@ final List<Sight> mocks = [
     'Сomplejo arquitectónico, cultural y de entretenimiento',
   ),
   Sight(
-    'Edinburgh Castle',
+    'Edinburgh Castle Edinburgh Castle Edinburgh Castle Edinburgh Castle',
     55.948684005579224,
     -3.2000529055591183,
     'https://upload.wikimedia.org/wikipedia/commons/a/a1/EdinburghCastle.jpg',
@@ -34,7 +34,7 @@ final List<Sight> mocks = [
     'Castle',
   ),
   Sight(
-    'National Monument of Scotland',
+    'National Monument of Scotland National Monument of Scotland',
     55.95477100772063,
     -3.181899383180622,
     'https://upload.wikimedia.org/wikipedia/commons/0/0e/National_Monument_of_Scotland%2C_Calton_Hill%2C_Edinburgh.jpg',
@@ -42,7 +42,7 @@ final List<Sight> mocks = [
     'Tourist attraction',
   ),
   Sight(
-    'Dean Village',
+    'Dean Village Dean Village Dean Village Dean Village Dean Village',
     55.9523381383206,
     -3.218433886612059,
     'https://upload.wikimedia.org/wikipedia/commons/a/a4/Dean_Village%2C_Edinburgh_%2837952869852%29.jpg',
