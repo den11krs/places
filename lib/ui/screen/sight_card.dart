@@ -37,6 +37,15 @@ class SightCard extends StatelessWidget {
                       child: Image.network(
                         sight.url,
                         fit: BoxFit.cover,
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          }
+
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        },
                       ),
                     ),
                   ),
@@ -84,7 +93,7 @@ class SightCard extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontWeight: FontWeight.w400,
-                              fontSize: 14,
+                              //fontSize: 14,
                               //In Figma 'Line height' = 18px.
                               // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
                               height: 1.28,
