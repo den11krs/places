@@ -16,10 +16,10 @@ class SightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      //I've put here height 188 because the two halves of each SightCard has height of 96 and 92 in Figma.
-      height: 188,
+    return
+        // 4.8.3 AspectRatio используйте, чтобы привести виджеты SightCard в соотношение 3/2
+        AspectRatio(
+      aspectRatio: 3 / 2,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
         child: ColoredBox(
@@ -29,36 +29,54 @@ class SightCard extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 96,
-                    child: Image.network(
-                      sight.url,
-                      fit: BoxFit.cover,
+                  // The first section with the photo of the sight
+                  Flexible(
+                    flex: 96,
+                    child: Container(
+                      width: double.infinity,
+                      child: Image.network(
+                        sight.url,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 92,
+                  // The second section with the name and description of the sight
+                  Flexible(
+                    flex: 92,
                     child: Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            sight.name,
-                            textAlign: TextAlign.left,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              //In Figma 'Line height' = 20px.
-                              // To achieve this I use height of 1.25 => fontSize = 16 * 1.25 gives 20
-                              height: 1.25,
-                              color: Color(AppColors.appSecondaryColor),
+                          // 4.8.2 Добавьте отступ между между фотографиями и описанием с помощью SizedBox
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          // The name of the sight
+                          // 4.8.1  Используйте ConstrainedBox, чтобы ограничить размер текста по ширине до половины размера карточки.
+                          ConstrainedBox(
+                            constraints: BoxConstraints(
+                              maxWidth: MediaQuery.of(context).size.width / 2,
+                            ),
+                            child: Text(
+                              sight.name,
+                              textAlign: TextAlign.left,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16,
+                                //In Figma 'Line height' = 20px.
+                                // To achieve this I use height of 1.25 => fontSize = 16 * 1.25 gives 20
+                                height: 1.25,
+                                color: Color(AppColors.appSecondaryColor),
+                              ),
                             ),
                           ),
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          // The sight details
                           Text(
                             sight.details,
                             textAlign: TextAlign.left,
@@ -79,6 +97,7 @@ class SightCard extends StatelessWidget {
                   ),
                 ],
               ),
+              // The type of the sight in the left upper corner of the sight card.
               Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
