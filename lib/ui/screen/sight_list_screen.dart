@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
+
 import 'package:places/res/app_assets.dart';
 import 'package:places/res/app_colors.dart';
 import 'package:places/res/app_strings.dart';
