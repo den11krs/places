@@ -21,7 +21,7 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       appBar: const SightListAppBar(
         // Here the height is 128px = 16px of bottomPadding + 72px of Text + 40px of topPadding
-        // In the MyCustomAppBar there is a SafeArea widget, which is 24px high in the design but can be different on different devices.
+        // In the SightListAppBar there is a SafeArea widget, which is 24px high in the design but can be different on different devices.
         height: 128,
       ),
       body: SingleChildScrollView(

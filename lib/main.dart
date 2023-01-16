@@ -3,6 +3,7 @@ import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
 import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/screen/sight_details.dart';
+import 'package:places/ui/screen/visiting_screen.dart';
 
 import 'package:places/res/app_assets.dart';
 import 'package:places/res/app_colors.dart';
@@ -18,12 +19,28 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: AppStrings.appTitle,
-        theme: ThemeData(
-          fontFamily: 'Roboto',
-        ),
-        home: // SightCard(sight: mocks[2]));
-            //SightListScreen());
-            SightDetails(sight: mocks[4]));
+      title: AppStrings.appTitle,
+      theme: ThemeData(
+        fontFamily: 'Roboto',
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: const MyHomePage(),
+      // SightCard(sight: mocks[2]));
+      // SightListScreen());
+      //SightDetails(sight: mocks[4]));
+      //VisitingScreen(),
+      //);
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    return VisitingScreen();
   }
 }

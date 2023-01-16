@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/res/app_assets.dart';
 import 'package:places/res/app_colors.dart';
-// import 'package:places/res/app_strings.dart';
+import 'package:places/res/app_strings.dart';
 
 class SightDetails extends StatelessWidget {
   final Sight sight;
@@ -117,8 +117,8 @@ class SightDetails extends StatelessWidget {
                                         fontWeight: FontWeight.w700,
                                         fontSize: 14,
                                         //In Figma 'Line height' = 18px.
-                                        // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
-                                        height: 1.28,
+                                        // To achieve this I use height of 1.285 => fontSize = 14 * 1.285 gives 17.99
+                                        height: 1.285,
                                         color: Color(
                                           AppColors.appSecondaryColor,
                                         ),
@@ -274,13 +274,7 @@ class SightDetails extends StatelessWidget {
                                       AppColors.appSecondaryColor,
                                     ),
                                     semanticsLabel: 'Favourite',
-                                  )
-                                  // Icon(
-                                  //   Icons.heart_broken_outlined,
-                                  //   size: 22,
-                                  //   color: Color(AppColors.appSecondaryColor),
-                                  // ),
-                                  ,
+                                  ),
                                   const SizedBox(width: 10),
                                   const Text(
                                     'В Избранное',
