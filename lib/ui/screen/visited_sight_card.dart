@@ -6,10 +6,10 @@ import 'package:places/domain/sight.dart';
 import 'package:places/res/app_colors.dart';
 import 'package:places/res/app_strings.dart';
 
-class SightCard extends StatelessWidget {
+class VisitedSightCard extends StatelessWidget {
   final Sight sight;
 
-  const SightCard({
+  const VisitedSightCard({
     Key? key,
     required this.sight,
   }) : super(key: key);
@@ -80,7 +80,27 @@ class SightCard extends StatelessWidget {
                           const SizedBox(
                             height: 2,
                           ),
-                          // The sight details
+
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 10),
+                            child: Text(
+                              AppStrings.sightVisited,
+                              textAlign: TextAlign.left,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                //In Figma 'Line height' = 18px.
+                                // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
+                                height: 1.28,
+                                color: Color(AppColors.appSecondary2Color),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 2,
+                          ),
                           const Text(
                             // TODO: Find out where I should get this info for each place.
                             AppStrings.sightClosedUntil,

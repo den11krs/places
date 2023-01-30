@@ -131,7 +131,7 @@ class SightDetails extends StatelessWidget {
                                   // TODO: Change this hardcoded line to the real data, when you know where to get it.
                                   const Flexible(
                                     child: Text(
-                                      'Closed until 9:00 AM',
+                                      AppStrings.sightClosedUntil,
                                       textAlign: TextAlign.left,
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
@@ -315,11 +315,12 @@ class SightDetails extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
                   child: Container(
+                    alignment: Alignment.center,
                     width: 32,
                     height: 32,
                     color: Colors.white,
                     child: IconButton(
-                      iconSize: 10,
+                      iconSize: 12,
                       icon: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Color(AppColors.appMainColor),

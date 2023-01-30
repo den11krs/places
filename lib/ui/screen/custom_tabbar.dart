@@ -6,13 +6,13 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Size get preferredSize {
-    return const Size.fromHeight(48);
+    return const Size.fromHeight(56);
   }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+      padding: const EdgeInsets.fromLTRB(16, 6, 16, 14),
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
@@ -21,6 +21,15 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
           ),
         ),
         child: TabBar(
+          overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.pressed)) {
+                return Colors.white;
+              }
+
+              return null;
+            },
+          ),
           padding: EdgeInsets.zero,
           labelColor: Colors.white,
           labelStyle: const TextStyle(

@@ -19,17 +19,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: AppStrings.appTitle,
       theme: ThemeData(
         fontFamily: 'Roboto',
         scaffoldBackgroundColor: Colors.white,
       ),
       home: const MyHomePage(),
-      // SightCard(sight: mocks[2]));
-      // SightListScreen());
-      //SightDetails(sight: mocks[4]));
-      //VisitingScreen(),
-      //);
+      // const MyHomePage(),
+      // SightCard(sight: mocks[0]),
+      // const SightListScreen(),
+      // SightDetails(sight: mocks[0]),
     );
   }
 }
