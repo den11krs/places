@@ -21,40 +21,99 @@ class _SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       appBar: const SightListAppBar(
         // Here the height is 128px = 16px of bottomPadding + 72px of Text + 40px of topPadding
-        // In the MyCustomAppBar there is a SafeArea widget, which is 24px high in the design but can be different on different devices.
+        // In the SightListAppBar there is a SafeArea widget, which is 24px high in the design but can be different on different devices.
         height: 128,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            for (var i = 0; i < mocks.length; i++) ...[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                child: Stack(
-                  children: [
-                    SightCard(sight: mocks[i]),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: 16,
-                        ),
-                        child: SvgPicture.asset(
-                          AppAssets.appHeartIcon,
-                          color: Colors.white,
-                          height: 24,
-                          width: 24,
-                          semanticsLabel: 'Like',
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              for (var i = 0; i < mocks.length; i++) ...[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                  child: Stack(
+                    children: [
+                      SightCard(sight: mocks[i]),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 16,
+                            horizontal: 16,
+                          ),
+                          child: SvgPicture.asset(
+                            AppAssets.appHeartIcon,
+                            color: Colors.white,
+                            height: 24,
+                            width: 24,
+                            semanticsLabel: 'Like',
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ],
-          ],
+          ),
         ),
+      ),
+      //TODO: Apparently I need to put this BottomNavigationBar into a separate widget to be able to use it easily on diffrent screens.
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              width: 24,
+              height: 24,
+              child: SvgPicture.asset(
+                AppAssets.appListBottomNavigationBar,
+                color: const Color(AppColors.appSecondaryColor),
+                semanticsLabel: 'List',
+              ),
+            ),
+            label: 'List',
+          ),
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              width: 24,
+              height: 24,
+              child: SvgPicture.asset(
+                AppAssets.appMapBottomNavigationBar,
+                color: const Color(AppColors.appMainColor),
+                semanticsLabel: 'Navigation',
+              ),
+            ),
+            label: 'Map',
+          ),
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              width: 24,
+              height: 24,
+              child: SvgPicture.asset(
+                AppAssets.appHeartBottomNavigationBar,
+                color: const Color(AppColors.appSecondaryColor),
+                semanticsLabel: 'Favourite',
+              ),
+            ),
+            label: 'Favourite',
+          ),
+          BottomNavigationBarItem(
+            icon: SizedBox(
+              width: 24,
+              height: 24,
+              child: SvgPicture.asset(
+                AppAssets.appSettingsBottomNavigationBar,
+                color: const Color(AppColors.appSecondaryColor),
+                semanticsLabel: 'Settings',
+              ),
+            ),
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }
