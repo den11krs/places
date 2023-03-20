@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:places/res/app_colors.dart';
 
 class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
-  const CustomTabBar({super.key});
-
   @override
   Size get preferredSize {
-    return const Size.fromHeight(56);
+    return const Size.fromHeight(kToolbarHeight);
   }
+
+  const CustomTabBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,11 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
-          color: const Color(
-            AppColors.appBackgroundColor,
-          ),
+          color: AppColors.appBackgroundColor,
         ),
         child: TabBar(
           overlayColor: MaterialStateProperty.resolveWith<Color?>(
-            (Set<MaterialState> states) {
+            (states) {
               if (states.contains(MaterialState.pressed)) {
                 return Colors.white;
               }
@@ -40,7 +38,7 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
             // To achieve this I use height of 1.285 => fontSize = 14 * 1.285 gives 17.99
             height: 1.285,
           ),
-          unselectedLabelColor: const Color(AppColors.inactiveBlack),
+          unselectedLabelColor: AppColors.inactiveBlack,
           unselectedLabelStyle: const TextStyle(
             fontFamily: 'Roboto',
             fontWeight: FontWeight.w700,
@@ -52,7 +50,7 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
           indicatorWeight: 0.0,
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(40),
-            color: const Color(AppColors.appSecondaryColor),
+            color: AppColors.appSecondaryColor,
           ),
           tabs: const [
             Tab(

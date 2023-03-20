@@ -25,22 +25,13 @@ class App extends StatelessWidget {
         fontFamily: 'Roboto',
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const MyHomePage(),
-      // const MyHomePage(),
+      home: const SightListScreen(),
+      //TODO: Delete these lines after you implement normal navigation
+
       // SightCard(sight: mocks[0]),
       // const SightListScreen(),
       // SightDetails(sight: mocks[0]),
+      // const VisitingScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() {
-    return VisitingScreen();
   }
 }

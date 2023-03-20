@@ -16,10 +16,13 @@ dependencies:
   surf_lint_rules: ^1.5.0
 
 dev_dependencies:
+
+  dart_code_metrics: ^4.16.0 
+
   flutter_test:
     sdk: flutter
 
-  dart_code_metrics: ^4.16.0
+  
 
 flutter:
   uses-material-design: true

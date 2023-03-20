@@ -1,3 +1,5 @@
+// ignore_for_file: directives_ordering
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -20,20 +22,18 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const SightListAppBar(
-        // Here the height is 128px = 16px of bottomPadding + 72px of Text + 40px of topPadding
-        // In the SightListAppBar there is a SafeArea widget, which is 24px high in the design but can be different on different devices.
         height: 128,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              for (var i = 0; i < mocks.length; i++) ...[
+              for (final mock in mocks) ...[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                   child: Stack(
                     children: [
-                      SightCard(sight: mocks[i]),
+                      SightCard(sight: mock),
                       Align(
                         alignment: Alignment.topRight,
                         child: Padding(
@@ -71,7 +71,7 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appListBottomNavigationBar,
-                color: const Color(AppColors.appSecondaryColor),
+                color: AppColors.appSecondaryColor,
                 semanticsLabel: 'List',
               ),
             ),
@@ -83,7 +83,7 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appMapBottomNavigationBar,
-                color: const Color(AppColors.appMainColor),
+                color: AppColors.appMainColor,
                 semanticsLabel: 'Navigation',
               ),
             ),
@@ -95,7 +95,7 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appHeartBottomNavigationBar,
-                color: const Color(AppColors.appSecondaryColor),
+                color: AppColors.appSecondaryColor,
                 semanticsLabel: 'Favourite',
               ),
             ),
@@ -107,7 +107,7 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appSettingsBottomNavigationBar,
-                color: const Color(AppColors.appSecondaryColor),
+                color: AppColors.appSecondaryColor,
                 semanticsLabel: 'Settings',
               ),
             ),
@@ -121,6 +121,9 @@ class _SightListScreenState extends State<SightListScreen> {
 
 class SightListAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
+
+  @override
+  Size get preferredSize => Size.fromHeight(height);
 
   const SightListAppBar({super.key, required this.height});
 
@@ -145,7 +148,7 @@ class SightListAppBar extends StatelessWidget implements PreferredSizeWidget {
                   //In Figma 'Line height' = 36px.
                   // To achieve this I use height of 1.125 => fontSize = 32 * 1.125 gives 36
                   height: 1.125,
-                  color: Color(AppColors.appSecondaryColor),
+                  color: AppColors.appSecondaryColor,
                 ),
               ),
             ),
@@ -154,7 +157,4 @@ class SightListAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(height);
 }

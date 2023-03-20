@@ -4,4 +4,8 @@ class AppStrings {
   static const String sightClosedUntil = 'Закрыто до 20:00';
   static const String sightPlanned = 'Запланировано на 12 окт. 2020';
   static const String sightVisited = 'Цель достигнута 12 окт. 2020';
+  static const String wantToVisitEmpty =
+      'Отмечайте понравившиеся места и они появиятся здесь.';
+  static const String visitedEmpty =
+      'Отмечайте понравившиеся места и они появиятся здесь.';
 }
