@@ -93,7 +93,7 @@ class SightDetails extends StatelessWidget {
                                   //In Figma 'Line height' = 28.8.
                                   // To achieve this I use height of 1.2 => fontSize = 24 * 1.2 gives 28.8
                                   height: 1.2,
-                                  color: AppColors.appSecondaryColor,
+                                  // color: AppColors.appSecondaryColor,
                                 ),
                               ),
                             ),
@@ -113,7 +113,7 @@ class SightDetails extends StatelessWidget {
                                         //In Figma 'Line height' = 18px.
                                         // To achieve this I use height of 1.285 => fontSize = 14 * 1.285 gives 17.99
                                         height: 1.285,
-                                        color: AppColors.appSecondaryColor,
+                                        //color: AppColors.appSecondaryColor,
                                       ),
                                     ),
                                   ),
@@ -132,7 +132,7 @@ class SightDetails extends StatelessWidget {
                                         //In Figma 'Line height' = 18px.
                                         // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
                                         height: 1.28,
-                                        color: AppColors.appSecondary2Color,
+                                        // color: AppColors.appSecondary2Color,
                                       ),
                                     ),
                                   ),
@@ -158,7 +158,7 @@ class SightDetails extends StatelessWidget {
                             //In Figma 'Line height' = 18px.
                             // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
                             height: 1.28,
-                            color: AppColors.appSecondaryColor,
+                            //color: AppColors.appSecondaryColor,
                           ),
                         ),
                       ),
@@ -169,9 +169,10 @@ class SightDetails extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         child: Stack(
                           children: [
-                            const Positioned.fill(
+                            Positioned.fill(
                               child: ColoredBox(
-                                color: AppColors.appGreenColor,
+                                // TODO Check this color
+                                color: Theme.of(context).highlightColor,
                               ),
                             ),
                             TextButton(
@@ -181,6 +182,7 @@ class SightDetails extends StatelessWidget {
                                 children: [
                                   SvgPicture.asset(
                                     AppAssets.appGoIcon,
+                                    // TODO Check this color
                                     color: Colors.white,
                                     semanticsLabel: 'Go',
                                   ),
@@ -208,7 +210,7 @@ class SightDetails extends StatelessWidget {
                       ),
                     ),
                     Divider(
-                      color: AppColors.appSecondary2Color.withOpacity(0.56),
+                      // color: AppColors.appSecondary2Color.withOpacity(0.56),
                       thickness: 0.8,
                       indent: 16,
                       endIndent: 16,
@@ -226,8 +228,8 @@ class SightDetails extends StatelessWidget {
                                 children: [
                                   SvgPicture.asset(
                                     AppAssets.appCalendarIcon,
-                                    color: AppColors.appSecondary2Color
-                                        .withOpacity(0.56),
+                                    // TODO Check this color
+                                    // color: AppColors.appSecondary2Color.withOpacity(0.56),
                                     semanticsLabel: 'Calendar',
                                   ),
                                   const SizedBox(width: 10),
@@ -239,8 +241,7 @@ class SightDetails extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
-                                      color: AppColors.appSecondary2Color
-                                          .withOpacity(0.56),
+                                      // color: AppColors.appSecondary2Color.withOpacity(0.56),
                                     ),
                                   ),
                                 ],
@@ -255,7 +256,8 @@ class SightDetails extends StatelessWidget {
                                 children: [
                                   SvgPicture.asset(
                                     AppAssets.appHeartIcon,
-                                    color: AppColors.appSecondaryColor,
+                                    // TODO Check this color
+                                    // color: AppColors.appSecondaryColor,
                                     semanticsLabel: 'Favourite',
                                   ),
                                   const SizedBox(width: 10),
@@ -270,7 +272,7 @@ class SightDetails extends StatelessWidget {
                                       //In Figma 'Line height' = 18px.
                                       // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
                                       height: 1.28,
-                                      color: AppColors.appSecondaryColor,
+                                      // color: AppColors.appSecondaryColor,
                                     ),
                                   ),
                                 ],
@@ -301,7 +303,8 @@ class SightDetails extends StatelessWidget {
                       iconSize: 12,
                       icon: const Icon(
                         Icons.arrow_back_ios_new_rounded,
-                        color: AppColors.appMainColor,
+                        // TODO Check this color
+                        // color: AppColors.appMainColor,
                         semanticLabel: 'Go back to sight list screen',
                       ),
                       onPressed: () {

@@ -17,7 +17,7 @@ class SightCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: ColoredBox(
-        color: AppColors.appBackgroundColor,
+        color: Theme.of(context).scaffoldBackgroundColor,
         child: Stack(
           children: [
             Column(
@@ -51,13 +51,13 @@ class SightCard extends StatelessWidget {
                         textAlign: TextAlign.left,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                           //In Figma 'Line height' = 20px.
                           // To achieve this I use height of 1.25 => fontSize = 16 * 1.25 gives 20
                           height: 1.25,
-                          color: AppColors.appSecondaryColor,
+                          color: Theme.of(context).colorScheme.background,
                         ),
                       ),
                       const SizedBox(
@@ -74,7 +74,7 @@ class SightCard extends StatelessWidget {
                           //In Figma 'Line height' = 18px.
                           // To achieve this I use height of 1.28 => fontSize = 14 * 1.28 gives 17.92
                           height: 1.28,
-                          color: AppColors.appSecondary2Color,
+                          // color: AppColors.appSecondary2Color,
                         ),
                       ),
                     ],

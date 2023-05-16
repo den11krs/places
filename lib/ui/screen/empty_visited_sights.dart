@@ -17,7 +17,7 @@ class EmptyVisitedSights extends StatelessWidget {
           height: 64,
           child: SvgPicture.asset(
             AppAssets.appVisited,
-            color: AppColors.appSecondary2Color.withOpacity(0.56),
+            // color: AppColors.appSecondary2Color.withOpacity(0.56),
             semanticsLabel: 'Visited places empty screen',
           ),
         ),
@@ -34,7 +34,7 @@ class EmptyVisitedSights extends StatelessWidget {
             //In Figma 'Line height' = 24px.
             // To achieve this I use height of 1.33 => fontSize = 18 * 1.33 gives 23.94
             height: 1.33,
-            color: AppColors.appSecondary2Color.withOpacity(0.56),
+            // color: AppColors.appSecondary2Color.withOpacity(0.56),
           ),
         ),
         Padding(
@@ -52,7 +52,7 @@ class EmptyVisitedSights extends StatelessWidget {
               //In Figma 'Line height' = 18px.
               // To achieve this I use height of 1.285 => fontSize = 14 * 1.285 gives 17.99
               height: 1.285,
-              color: AppColors.appSecondary2Color.withOpacity(0.56),
+              // color: AppColors.appSecondary2Color.withOpacity(0.56),
             ),
           ),
         ),

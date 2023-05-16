@@ -16,13 +16,14 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
-          color: AppColors.appBackgroundColor,
+          // color: AppColors.appSecondary3Color,
         ),
         child: TabBar(
           overlayColor: MaterialStateProperty.resolveWith<Color?>(
             (states) {
-              if (states.contains(MaterialState.pressed)) {
-                return Colors.white;
+              if (states.contains(MaterialState.pressed) ||
+                  states.contains(MaterialState.hovered)) {
+                return Theme.of(context).scaffoldBackgroundColor;
               }
 
               return null;
@@ -38,7 +39,7 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
             // To achieve this I use height of 1.285 => fontSize = 14 * 1.285 gives 17.99
             height: 1.285,
           ),
-          unselectedLabelColor: AppColors.inactiveBlack,
+          // unselectedLabelColor: AppColors.inactiveBlack,
           unselectedLabelStyle: const TextStyle(
             fontFamily: 'Roboto',
             fontWeight: FontWeight.w700,
@@ -50,8 +51,9 @@ class CustomTabBar extends StatelessWidget with PreferredSizeWidget {
           indicatorWeight: 0.0,
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(40),
-            color: AppColors.appSecondaryColor,
+            // color: AppColors.appSecondaryColor,
           ),
+          indicatorSize: TabBarIndicatorSize.tab,
           tabs: const [
             Tab(
               height: 40,

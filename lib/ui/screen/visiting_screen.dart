@@ -13,16 +13,15 @@ class VisitingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const showEmptyScreensSwitcher = false;
+    const showEmptyScreensSwitcher = true;
 
     return SafeArea(
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
             elevation: 0,
-            //TODO: Change the background color in themes
-            backgroundColor: Colors.white,
             centerTitle: true,
             titleTextStyle: const TextStyle(
               fontFamily: 'Roboto',
@@ -31,7 +30,7 @@ class VisitingScreen extends StatelessWidget {
               //In Figma 'Line height' = 24
               // To achieve this I use height of 1.333 => fontSize = 18 * 1.33 gives 24
               height: 1.333,
-              color: AppColors.appMainColor,
+              // color: AppDarkColors.appErrorColor,
             ),
             title: const Text(
               'Избранное',
@@ -63,7 +62,7 @@ class VisitingScreen extends StatelessWidget {
                   height: 24,
                   child: SvgPicture.asset(
                     AppAssets.appListBottomNavigationBar,
-                    color: AppColors.appSecondaryColor,
+                    // color: AppColors.appSecondaryColor,
                     semanticsLabel: 'List',
                   ),
                 ),
@@ -75,7 +74,7 @@ class VisitingScreen extends StatelessWidget {
                   height: 24,
                   child: SvgPicture.asset(
                     AppAssets.appMapBottomNavigationBar,
-                    color: AppColors.appSecondaryColor,
+                    // color: AppColors.appSecondaryColor,
                     semanticsLabel: 'Navigation',
                   ),
                 ),
@@ -87,7 +86,7 @@ class VisitingScreen extends StatelessWidget {
                   height: 24,
                   child: SvgPicture.asset(
                     AppAssets.appHeartBottomNavigationBar,
-                    color: AppColors.appMainColor,
+                    //color: AppColors.appMainColor,
                     semanticsLabel: 'Favourite',
                   ),
                 ),
@@ -99,7 +98,7 @@ class VisitingScreen extends StatelessWidget {
                   height: 24,
                   child: SvgPicture.asset(
                     AppAssets.appSettingsBottomNavigationBar,
-                    color: AppColors.appSecondaryColor,
+                    //color: AppColors.appSecondaryColor,
                     semanticsLabel: 'Settings',
                   ),
                 ),

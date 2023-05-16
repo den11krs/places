@@ -8,6 +8,9 @@ class AppAssets {
   static const appShare = 'res/icon_share.svg';
   static const appClose = 'res/icon_close.svg';
 
+  static const appSearchIcon = 'res/icon_search.svg';
+  static const appFilterIcon = 'res/icon_filter.svg';
+
   static const appListBottomNavigationBar =
       'res/icon_list_bottomnavigationbar.svg';
   static const appMapBottomNavigationBar =

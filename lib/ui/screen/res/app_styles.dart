@@ -12,3 +12,17 @@ abstract class AppFonts {
 //     color: ,
 //   );
 }
+
+const TextStyle _text = TextStyle(
+  fontStyle: FontStyle.normal,
+);
+
+TextStyle regular10 = _text.copyWith(fontSize: 10);
+TextStyle regular12 = _text.copyWith(fontSize: 12);
+TextStyle regular14 = _text.copyWith(fontSize: 14);
+
+TextStyle matHeadline6 = _text.copyWith(
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  letterSpacing: 0.15,
+);

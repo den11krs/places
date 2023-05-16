@@ -17,7 +17,8 @@ class VisitedSightCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: ColoredBox(
-        color: AppColors.appBackgroundColor,
+        // TODO Check this color
+        color: Colors.limeAccent,
         child: Stack(
           children: [
             Column(
@@ -56,7 +57,8 @@ class VisitedSightCard extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                           height: 1.15, // This gives me 20px of line height
-                          color: AppColors.appSecondaryColor,
+                          // TODO Check this color
+                          // color: AppColors.appSecondaryColor,
                         ),
                       ),
                       const SizedBox(
@@ -71,7 +73,8 @@ class VisitedSightCard extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
                           height: 1.2, // This gives me 18px of line height
-                          color: AppColors.appSecondary2Color,
+                          // TODO Check this color
+                          // color: AppColors.appSecondary2Color,
                         ),
                       ),
                       const SizedBox(
@@ -87,7 +90,7 @@ class VisitedSightCard extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
                           height: 1.2, // This gives me 18px of line height
-                          color: AppColors.appSecondary2Color,
+                          // color: AppColors.appSecondary2Color,
                         ),
                       ),
                     ],

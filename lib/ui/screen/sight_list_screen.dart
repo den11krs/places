@@ -28,29 +28,90 @@ class _SightListScreenState extends State<SightListScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              for (final mock in mocks) ...[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                  child: Stack(
-                    children: [
-                      SightCard(sight: mock),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16,
-                            horizontal: 16,
-                          ),
-                          child: SvgPicture.asset(
-                            AppAssets.appHeartIcon,
-                            color: Colors.white,
-                            height: 24,
+              // I guess here I should have my Search widget.
+              Container(
+                height: 68,
+                width: double.infinity,
+                // TODO Check this color
+                // color: AppColors.appBackgroundColor,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      // TODO Check this color
+                      // color: AppColors.appSecondary3Color,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          child: SizedBox(
                             width: 24,
-                            semanticsLabel: 'Like',
+                            height: 24,
+                            child: SvgPicture.asset(
+                              AppAssets.appSearchIcon,
+                              // TODO Check this color
+                              // color: AppColors.inactiveBlack,
+                              semanticsLabel: 'Search',
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        const Text(
+                          'Поиск',
+                          style: TextStyle(
+                            // color: AppColors.inactiveBlack,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+                          child: SizedBox(
+                            width: 24,
+                            height: 24,
+                            child: SvgPicture.asset(
+                              AppAssets.appFilterIcon,
+                              // TODO Check this color
+                              // color: AppColors.appGreenColor,
+                              semanticsLabel: 'Filter',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              for (final mock in mocks) ...[
+                ColoredBox(
+                  // TODO Check this color
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                    child: Stack(
+                      children: [
+                        SightCard(sight: mock),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 16,
+                              horizontal: 16,
+                            ),
+                            child: SvgPicture.asset(
+                              AppAssets.appHeartIcon,
+                              // TODO Check this color
+                              // color: Colors.white,
+                              height: 24,
+                              width: 24,
+                              semanticsLabel: 'Like',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -60,7 +121,8 @@ class _SightListScreenState extends State<SightListScreen> {
       ),
       //TODO: Apparently I need to put this BottomNavigationBar into a separate widget to be able to use it easily on diffrent screens.
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
+        // TODO Check this color
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
@@ -71,7 +133,8 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appListBottomNavigationBar,
-                color: AppColors.appSecondaryColor,
+                // TODO Check this color
+                //color: AppColors.appSecondaryColor,
                 semanticsLabel: 'List',
               ),
             ),
@@ -83,7 +146,8 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appMapBottomNavigationBar,
-                color: AppColors.appMainColor,
+                // TODO Check this color
+                // color: AppColors.appMainColor,
                 semanticsLabel: 'Navigation',
               ),
             ),
@@ -95,7 +159,8 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appHeartBottomNavigationBar,
-                color: AppColors.appSecondaryColor,
+                // TODO Check this color
+                // color: AppColors.appSecondaryColor,
                 semanticsLabel: 'Favourite',
               ),
             ),
@@ -107,7 +172,8 @@ class _SightListScreenState extends State<SightListScreen> {
               height: 24,
               child: SvgPicture.asset(
                 AppAssets.appSettingsBottomNavigationBar,
-                color: AppColors.appSecondaryColor,
+                // TODO Check this color
+                // color: AppColors.appSecondaryColor,
                 semanticsLabel: 'Settings',
               ),
             ),
@@ -132,23 +198,27 @@ class SightListAppBar extends StatelessWidget implements PreferredSizeWidget {
     return SafeArea(
       child: Column(
         children: const [
-          SizedBox(
-            width: double.infinity,
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(16, 40, 16, 16),
-              child: Text(
-                AppStrings.appBarText,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                textScaleFactor: 1.0,
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                  fontSize: 32,
-                  //In Figma 'Line height' = 36px.
-                  // To achieve this I use height of 1.125 => fontSize = 32 * 1.125 gives 36
-                  height: 1.125,
-                  color: AppColors.appSecondaryColor,
+          ColoredBox(
+            color: AppLightColors.appBackgroundColor,
+            child: SizedBox(
+              width: double.infinity,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(16, 40, 16, 16),
+                child: Text(
+                  AppStrings.appBarText,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  textScaleFactor: 1.0,
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 32,
+                    //In Figma 'Line height' = 36px.
+                    // To achieve this I use height of 1.125 => fontSize = 32 * 1.125 gives 36
+                    height: 1.125,
+                    // TODO Check this color
+                    // color: AppColors.appSecondaryColor,
+                  ),
                 ),
               ),
             ),
