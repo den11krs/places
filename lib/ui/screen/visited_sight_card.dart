@@ -4,6 +4,20 @@ import 'package:places/domain/sight.dart';
 import 'package:places/res/app_colors.dart';
 import 'package:places/res/app_strings.dart';
 
+class NewVisitedSightCard extends StatelessWidget {
+  final Sight sight;
+
+  const NewVisitedSightCard({
+    Key? key,
+    required this.sight,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class VisitedSightCard extends StatelessWidget {
   final Sight sight;
 

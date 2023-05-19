@@ -18,7 +18,7 @@ abstract class AppLightColors {
   static const appOnSecondaryColor = Color(0xFFFFFFFF);
 
   static const appOnBackgroundColor = Color(0xFF252849);
-  static const appOnSurfaceColor = Color(0xFF252849);
+  static const appOnSurfaceColor = Color(0xFF3B3E5B);
   static const appOnErrorColor = Color(0xFFFFFFFF);
 
   static const appInactiveBlack = Color(0x8F7C7E92);

@@ -28,7 +28,7 @@ class _SightListScreenState extends State<SightListScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // I guess here I should have my Search widget.
+              // I guess here I should have my Search bar widget.
               Container(
                 height: 68,
                 width: double.infinity,
@@ -60,6 +60,7 @@ class _SightListScreenState extends State<SightListScreen> {
                         const Text(
                           'Поиск',
                           style: TextStyle(
+                            // TODO Check this color
                             // color: AppColors.inactiveBlack,
                             fontSize: 16,
                           ),
@@ -87,31 +88,11 @@ class _SightListScreenState extends State<SightListScreen> {
               for (final mock in mocks) ...[
                 ColoredBox(
                   // TODO Check this color
-                  color: Theme.of(context).scaffoldBackgroundColor,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    child: Stack(
-                      children: [
-                        SightCard(sight: mock),
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 16,
-                              horizontal: 16,
-                            ),
-                            child: SvgPicture.asset(
-                              AppAssets.appHeartIcon,
-                              // TODO Check this color
-                              // color: Colors.white,
-                              height: 24,
-                              width: 24,
-                              semanticsLabel: 'Like',
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                  color: AppLightColors.appBackgroundColor,
+                  child: Stack(
+                    children: [
+                      SightCard(sight: mock),
+                    ],
                   ),
                 ),
               ],
@@ -199,6 +180,7 @@ class SightListAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Column(
         children: const [
           ColoredBox(
+            // TODO Check this color
             color: AppLightColors.appBackgroundColor,
             child: SizedBox(
               width: double.infinity,
