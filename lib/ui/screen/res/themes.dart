@@ -14,6 +14,15 @@ final lightTheme = ThemeData(
       textStyle: const TextStyle(color: Colors.black),
     ),
   ),
+  cardTheme: CardTheme(
+    clipBehavior: Clip.antiAliasWithSaveLayer,
+    color: AppLightColors.appSurfaceColor,
+    elevation: 0,
+    margin: const EdgeInsets.fromLTRB(16, 24, 16, 0),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12.0),
+    ),
+  ),
   primaryTextTheme: TextTheme(
     titleLarge: matHeadline6,
   ),

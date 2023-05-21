@@ -29,7 +29,7 @@ abstract class AppDarkColors {
   static const appPrimaryVariantColor = Color(0xFFFFFFFF);
   static const appPrimaryVariant2Color = Color(0xFF7C7E92);
 
-  static const appSecondaryColor = Color(0xFF4CAF50);
+  static const appSecondaryColor = Color(0xFF6ADA6F);
   static const appSecondaryVariantColor = Color(0xFFFCDD3D);
 
   static const appBackgroundColor = Color(0xFF21222C);

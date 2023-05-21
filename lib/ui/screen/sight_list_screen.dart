@@ -74,7 +74,7 @@ class _SightListScreenState extends State<SightListScreen> {
                             child: SvgPicture.asset(
                               AppAssets.appFilterIcon,
                               // TODO Check this color
-                              // color: AppColors.appGreenColor,
+                              color: AppLightColors.appSecondaryColor,
                               semanticsLabel: 'Filter',
                             ),
                           ),
@@ -86,15 +86,7 @@ class _SightListScreenState extends State<SightListScreen> {
               ),
 
               for (final mock in mocks) ...[
-                ColoredBox(
-                  // TODO Check this color
-                  color: AppLightColors.appBackgroundColor,
-                  child: Stack(
-                    children: [
-                      SightCard(sight: mock),
-                    ],
-                  ),
-                ),
+                SightCard(sight: mock),
               ],
             ],
           ),
